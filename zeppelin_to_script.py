@@ -13,7 +13,7 @@ for i in notebook["paragraphs"]:
         if len(para) > 0:
             para = '\n'.join(para)
             script.append(para)
-script_f = '\n\n'.join(script)
+script_f = '\n\n'.join(script).encode('utf-8')
 
 with open(output_file_name, 'w') as the_file:
     the_file.write(script_f)
